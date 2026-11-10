@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="資訊老師黃博胤">
+<meta name="description" content="機器人校隊第 1 堂：自我介紹、分隊、上課規則、比賽目標、分類積木與收納">
+<title>機器人校隊 第 1 堂</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav id="nav" aria-label="章節">
+  <a href="#welcome">歡迎</a>
+  <a href="#flow">今日流程</a>
+  <a href="#intro">自我介紹</a>
+  <a href="#teams">分隊</a>
+  <a href="#rules">上課規則</a>
+  <a href="#goal">比賽目標</a>
+  <a href="#storage">分類與收納</a>
+  <a href="#wrap">收尾</a>
+</nav>
+
+<main>
+
+<section id="welcome" class="hero">
+  <p class="eyebrow">勝利國小機器人校隊　第 1 堂</p>
+  <h1>我們要做一台<br>會自己跑的車</h1>
+  <p class="lead">預計明年 4、5 月，去參加 AERC 亞洲機器人大賽的「機器人循跡挑戰」。</p>
+  <p class="hint">按 → ← 鍵或點上方章節換頁</p>
+</section>
+
+<section id="flow">
+  <h2>今天要做什麼</h2>
+  <ol class="steps">
+    <li data-min="10"><b>自我介紹、分隊</b><span>10 分鐘</span></li>
+    <li data-min="25"><b>整理收納與清點</b><span>25 分鐘</span></li>
+    <li data-min="10"><b>看影片、說明比賽目標與規則</b><span>10 分鐘</span></li>
+    <li data-min="5"><b>收納歸位、簽名</b><span>5 分鐘</span></li>
+  </ol>
+  <div class="timer" aria-label="計時器">
+    <div id="timerDisplay" class="timer-num">10:00</div>
+    <div class="timer-btns">
+      <button type="button" data-set="10">10 分</button>
+      <button type="button" data-set="25">25 分</button>
+      <button type="button" data-set="5">5 分</button>
+      <button type="button" id="timerToggle">開始</button>
+      <button type="button" id="timerReset">重設</button>
+    </div>
+  </div>
+</section>
+
+<section id="intro">
+  <h2>自我介紹</h2>
+  <p class="lead">用這個句型，每個人 20 秒：</p>
+  <div class="quote">
+    我是 <span class="blank">＿＿＿</span>，<br>
+    我喜歡 <span class="blank">＿＿＿＿＿</span>，<br>
+    我想知道機器人 <span class="blank">＿＿＿＿＿</span>。
+  </div>
+  <p class="hint">老師先示範一次。聽別人說的時候，想一想：誰跟你喜歡的一樣？</p>
+</section>
+
+<section id="teams">
+  <h2>分隊與角色</h2>
+  <div class="two">
+    <div class="card">
+      <h3>分隊抽籤</h3>
+      <p class="small">一行一個名字。名單只留在這個頁面，不會儲存也不會上傳，重新整理就消失。</p>
+      <textarea id="names" rows="7" aria-label="名單，一行一個名字" placeholder="每行輸入一個名字"></textarea>
+      <div class="btns">
+        <button type="button" id="splitBtn">分成 2 隊</button>
+        <button type="button" id="clearBtn" class="ghost">清除</button>
+      </div>
+      <div id="teamResult" class="team-result" aria-live="polite"></div>
+    </div>
+    <div class="card">
+      <h3>每隊要分的 4 個角色</h3>
+      <ul class="roles">
+        <li><b>操控手</b>擺車、按啟動。比賽時每隊只有 1 人能上場。</li>
+        <li><b>量測員</b>量數字：距離、角度、黑白讀值、時間。</li>
+        <li><b>記錄員</b>填表：改了什麼、結果怎樣。</li>
+        <li><b>硬體工程師</b>領箱、清點零件、檢查線材與電池。</li>
+      </ul>
+      <p class="small">每隊 3 個人、4 個角色，先由 1 人兼任。每 2–3 堂輪替，所以每個人都會輪到操控手。</p>
+    </div>
+  </div>
+</section>
+
+<section id="rules">
+  <h2>上課規則</h2>
+  <ul class="rule-list">
+    <li><span class="n">1</span>零件用完，放回<b>原來的格子</b>。</li>
+    <li><span class="n">2</span>每堂<b>開始和結束</b>都要清點、簽名。</li>
+    <li><span class="n">3</span>不亂拆<b>別隊</b>的車。</li>
+    <li><span class="n">4</span>電池要充電，用完接上充電。</li>
+    <li><span class="n">5</span>車子動的時候，<b>手離開輪子</b>。</li>
+    <li><span class="n">6</span>調整的時候，<b>一次只改一個東西</b>。</li>
+    <li><span class="n">7</span>角色輪流當，每個人都要學會每個角色。</li>
+  </ul>
+</section>
+
+<section id="goal" class="clip-mode">
+  <div class="board">
+
+    <article class="clip c-main">
+      <p class="paper-name">機器人校隊日報<span>第 1 堂　比賽特刊</span></p>
+      <h2>車子沿著黑線，<br>自己衝向終點</h2>
+      <p class="byline">AERC 亞洲機器人大賽　機器人循跡挑戰</p>
+      <p class="dek">越快越好，而且<b>全程不能碰車</b>。</p>
+      <ul class="bullets">
+        <li>開始以後，<b>不能用手碰車</b>，也不能改程式。</li>
+        <li>路上有<b>寶特瓶</b>，要繞過去，不能撞倒。</li>
+        <li>每隊<b>只有 1 個人</b>可以上場操控。</li>
+        <li>我們用<b>實車</b>和<b>電腦模擬器</b>一起練，找出兩邊哪裡不一樣。</li>
+      </ul>
+    </article>
+
+    <div class="vids">
+      <figure class="clip c-vid v1">
+        <div class="video">
+          <iframe data-vid="n6REThQOXAg" title="影片 1" tabindex="-1" allow="autoplay; encrypted-media"></iframe>
+        </div>
+        <figcaption>圖 1　比賽影片</figcaption>
+      </figure>
+      <figure class="clip c-vid v2">
+        <div class="video">
+          <iframe data-vid="Wc96_zs8EsI" title="影片 2" tabindex="-1" allow="autoplay; encrypted-media"></iframe>
+        </div>
+        <figcaption>圖 2　比賽影片</figcaption>
+      </figure>
+    </div>
+
+    <article class="clip c-maps">
+      <h3>2026 賽事一覽　四張比賽地圖</h3>
+      <table class="maps">
+        <thead><tr><th>地圖</th><th>大小</th><th>時間</th><th>特別的地方</th></tr></thead>
+        <tbody>
+          <tr><td>A</td><td>100 × 480 公分</td><td>120 秒</td><td>時間越短越好，有 1 條黃線不能走回頭</td></tr>
+          <tr><td>B</td><td>100 × 480 公分</td><td>90 秒</td><td>時間越短越好，有 2 條黃線</td></tr>
+          <tr><td>C</td><td>150 × 150 公分</td><td>90 秒</td><td>魔王挑戰賽，最快的隊伍有額外獎金</td></tr>
+          <tr><td>D</td><td>100 × 480 公分</td><td>60 秒</td><td>天使挑戰賽，誰最接近 60 秒誰贏，超過就出局</td></tr>
+        </tbody>
+      </table>
+      <p class="source">比賽日期還沒公告，2027 年的規則也可能調整。資料來源：aerc1988.com.tw</p>
+    </article>
+
+  </div>
+</section>
+
+<section id="storage">
+  <h2>分類積木與收納</h2>
+  <p class="lead">3 步驟：<b>分類</b> → <b>點數</b> → <b>簽名</b></p>
+  <div class="grid8">
+    <div class="cat c1"><b>主機與電池</b><span>主機、充電電池</span></div>
+    <div class="cat c2"><b>馬達</b><span>大型馬達、中型馬達</span></div>
+    <div class="cat c3"><b>感測器</b><span>顏色、距離、力感測器</span></div>
+    <div class="cat c4"><b>線材</b><span>連接線、線夾</span></div>
+    <div class="cat c5"><b>輪子</b><span>輪子、輪胎</span></div>
+    <div class="cat c6"><b>樑</b><span>各種長度的樑和板</span></div>
+    <div class="cat c7"><b>銷與軸</b><span>銷、軸、軸套</span></div>
+    <div class="cat c8"><b>其他</b><span>連接件、齒輪、小零件</span></div>
+  </div>
+  <div class="two tips">
+    <div class="card">
+      <h3>怎麼分工</h3>
+      <p><b>硬體工程師</b>帶頭點數　<b>記錄員</b>填清點表<br><b>量測員</b>檢查標籤　<b>操控手</b>蓋盒子</p>
+    </div>
+    <div class="card">
+      <h3>小技巧</h3>
+      <p>先把<b>最小的零件</b>放進格子，再放大的。<br>數量對不上，先寫在「備註」，下課後老師處理。</p>
+    </div>
+  </div>
+</section>
+
+<section id="wrap">
+  <h2>收尾</h2>
+  <ol class="steps">
+    <li><b>零件回格、蓋盒</b></li>
+    <li><b>清點表簽名，交給老師</b></li>
+    <li><b>電池接上充電</b></li>
+  </ol>
+  <div class="quote big">一台自己會動的車，<br>一定需要哪<b>三樣東西</b>？</div>
+  <p class="hint">下週揭曉：我們來認識它們，還要開始組裝。</p>
+</section>
+
+</main>
+
+<div id="signature">made by 資訊老師黃博胤</div>
+<script src="app.js"></script>
+</body>
+</html>
